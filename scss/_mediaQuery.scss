@@ -1,0 +1,13 @@
+$desktopSize:   1024px;
+
+@mixin smallDevice {
+  @media (max-width: #{$desktopSize - 1px}) {
+    @content;
+  };
+};
+  
+@mixin desktop {
+  @media (min-width: #{$desktopSize}) {
+    @content;
+  };
+};

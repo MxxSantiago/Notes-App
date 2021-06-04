@@ -1,0 +1,105 @@
+@import 'page_bar';
+@import 'page';
+@import 'variables';
+@import 'main';
+@import 'tasks_container';
+@import 'data_container';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+
+html {
+    font-size: 17px;
+    overflow-x: hidden;
+    color: $black;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width:.35em;
+        background-color: $sweetOutline;
+
+        &:window-inactive {
+            display: none;
+        }
+    };
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $pageScroll;
+    };
+
+@include desktop {
+    overflow-y: hidden
+}};
+
+body {
+    width: 100%;
+};
+
+button::selection {
+    background: none;
+    color: none;
+}
+
+.dark-theme {
+    background-color: $black;
+
+    * {
+        color: $white2;
+    };
+
+    .tasks-container-title {
+        background-color: $black2;
+    };
+
+    .tasks-container {
+        .tasks {
+            .task, em {
+                background-color: $black;
+                border-bottom: 1px solid $sweetOutline;
+
+                &:last-child {
+                    border-bottom: 2px solid $sweetOutline;
+                };
+
+                &:hover {
+                    background-color: $DTHoverTasks;
+                };
+            };
+        };
+    };
+};
+
+.task-saved-popup-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - (300px + 3rem));
+    height: calc(100% - 3rem);
+    z-index: -1;
+    
+    .task-saved-popup {
+        font-size: 1em;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 12em;
+        border-radius: .5em;
+        background-color: rgb(85, 214, 85);
+
+        h4 {
+            color: #fff;
+        };
+
+    @include smallDevice {
+        width: 10em;
+    }};
+
+@include smallDevice {
+    height: calc(100% - (100px + 3rem));
+    width: calc(100vw - 3rem);
+}};
+

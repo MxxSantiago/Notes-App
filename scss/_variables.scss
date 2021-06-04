@@ -1,0 +1,29 @@
+
+$black: #0e0e10;
+$black2: #222229;
+$white: #fff;
+$white2: #f9f9ffff;
+$sweetOutline: #ddd;
+$contentOutline: #d9d9d9;
+$tasksContainerTitle: #f4f4f4;
+$themeButtonHover: #ccc;
+$themeButtonColor: #444;
+$noTaskDefaultText: #666;
+
+// Dark Theme - Light Theme
+$DTHoverTasks: rgb(37, 37, 68);
+$LTHoverTasks: #f9f9f9;
+
+/* BarQuerys - D: desktop, M: movil, H: height, W: width */
+$barMH: 100px; // Al darle al icono ocultar el noTaskDefault y cambiar el valor a max-content, volver a los 100px cuando se cree una nueva tarea
+$barDW: 300px;
+
+$buttonWidth: 80px;
+$deleteButton: #FB0404;
+$deleteButtonBorder: #EA0E0E;
+$deleteButtonHover: #d6030e;
+$deleteButtonHoverBorder: #c70101;
+
+$textAreaScroll: #0366ee;
+$pageScroll: #bbb;
+

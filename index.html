@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notes app">
+    <meta name="theme-color" content="#000"/>
+    <link rel="shortcut icon" href="/img/taskDesign.svg">
+    <link rel="apple-touch-icon" href="/img/pwaIcons/android/android-launchericon-192-192.png">
+    <title>Notes</title>
+    <link rel="stylesheet" href="/primitiveUI.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="page">
+        <nav class="page-bar">
+            <div id="new-task-container">
+                <form id="new-task-form">
+                    <input autocomplete="off" type="text" id="new-task-input" placeholder="note title" maxlength="30" spellcheck="false" required>
+                    <input type="submit" class="button" value="Add"></input>
+                    <div class="tasksDisplay-button">
+                        <img src="/img/bars.svg" draggable="false" alt="notes">
+                    </div>
+                </form>
+            </div>
+            <div class="data-container">
+                <div class="tasks-container-title">
+                    <h5>Notes</h5>
+                </div>
+                <div class="tasks-container">
+                    <div id="todo-list" class="tasks"></div>
+                </div>
+            </div>
+        </nav>
+        <main class="page_main">
+            <div class="task-saved-popup-container">
+                <div class="task-saved-popup">
+                    <h4>saved</h4>
+                </div>
+            </div>
+            <div class="main_section_container">    
+                <div class="task-config-container">
+                    <form id="titleChange-form">
+                        <input id="task-title" autocomplete="off" type="text" placeholder="new title" spellcheck="false" maxlength="30" required>
+                        <button id="saveTitle-button" class="muted-button" type="submit">save</button>
+                    </form>
+                        <hr>
+                    <textarea id="type-area" spellcheck="false" placeholder="type something..."></textarea>
+                    <div class="decision-buttons">
+                        <button id="save-button" class="accent-button">save note</button>
+                        <button id="delete-button">delete</button>
+                    </div>
+                </div>          
+            </div>
+        </main>
+        <div id="theme-button">
+            <img id="themeIconDark" src="/img/moon-solid.svg" alt="theme" draggable="false" alt="switch theme">
+            <img id="themeIconLight" src="/img/sun-solid.svg" alt="theme" draggable="false" alt="switch theme">
+        </div>
+        <div class="no-task-default-container" draggable="false">
+            <div class="no-task-default">
+                <img src="/img/taskDesign.svg" draggable="false" alt="create or select a note">
+                <h3>create or select a note</h3>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/app.js"></script>
+</body>
+</html>

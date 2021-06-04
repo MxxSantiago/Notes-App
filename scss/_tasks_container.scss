@@ -1,0 +1,81 @@
+@import 'variables';
+@import 'mediaQuery';
+
+.task-config-container {
+    width: 100%;
+    display: none;
+
+    #type-area {
+        resize: none;
+        min-height: 60vmin;
+
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width:.35em;
+
+            &:window-inactive {
+                display: none;
+            }
+        };
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($color: $textAreaScroll, $alpha: 0.7);
+            border-radius: 1em;
+        };
+    };
+
+    .decision-buttons {
+        #delete-button {
+            background-color: $deleteButton;
+            border: 1px solid $deleteButtonBorder;
+    
+            &:hover {
+                background-color: $deleteButtonHover;
+                border: 1px solid $deleteButtonHoverBorder;
+            };
+        };
+    };
+
+    #titleChange-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    
+        h2 {
+            margin: 0;
+            padding: 0;
+        };
+    
+        input {
+            margin-right: .5rem;
+        };
+
+        button {
+            width: $buttonWidth;
+        };       
+    
+    @include smallDevice {
+        flex-direction: row;
+    }};
+};
+
+#todo-list {
+    margin-top: 1rem; 
+    min-height: 20vmin; 
+    word-break: break-all; 
+    hyphens: auto;
+};
+
+.tasksSee {
+    height: max-content;
+    z-index: 5;
+};
+
+.tasksHidden {
+    height: 100px;
+    z-index: 0;
+
+@include desktop {
+    height: max-content;
+    z-index: 5;
+}};

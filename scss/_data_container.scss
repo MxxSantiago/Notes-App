@@ -1,0 +1,63 @@
+@import 'variables';
+
+.data-container {
+    height: calc(100vh - 100px);
+    outline: 1px solid $sweetOutline;
+};
+
+.tasks-container-title {
+    border-bottom: 1px solid $sweetOutline;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: $tasksContainerTitle;
+
+    h5::selection {
+            background: none;
+            color: none;
+    };    
+};
+
+.tasks-container {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width:.35em;
+    };
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #797979;
+        border-radius: 1em;
+    };
+    
+    .tasks {
+        margin: 0 !important;
+        text-align: center;
+        
+        .task, em {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            background-color: $white;
+            border-bottom: 1px solid $sweetOutline;
+
+            &:last-child {
+                border-bottom: 2px solid $sweetOutline;
+            };
+
+            &:hover {
+                background-color: $LTHoverTasks;
+            }
+
+            &::selection {
+                background: none;
+                color: none;
+            };
+        };
+    };
+};

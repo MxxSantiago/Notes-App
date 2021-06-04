@@ -1,0 +1,16 @@
+@import 'variables';
+
+.page_main {
+    padding: 1.5rem
+};
+
+.main_section_container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+@include smallDevice {
+    min-height: calc(100vh - 300px);
+    width: 100%;
+}};

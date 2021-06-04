@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'mediaQuery';
+
+.page-bar {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px auto;
+    border-right: 1px solid $sweetOutline;
+
+@include smallDevice {
+    overflow-y: hidden;
+    height: $barMH;
+    border-right: none;
+}};
+
+#new-task-container {
+    padding: 1.5rem;
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;    
+
+    #new-task-form {
+        height: 55px;
+        display: flex;
+        width: 100%;
+
+        #new-task-input {
+            margin-right: .5rem;
+        };
+
+        .button {
+            width: $buttonWidth;
+        };
+    };
+
+    .tasksDisplay-button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 26px;
+        width: 28px;
+        border-top-left-radius: 20%;
+        cursor: pointer;
+        background-color: $sweetOutline;
+        bottom: 0;
+        right: 0;
+
+        &:hover {
+            background-color: $themeButtonHover;
+        };
+
+        img {
+            width: 80%;
+            height: 80%;
+
+            &::selection {
+                background: none;
+                color: none;
+            };
+        };
+
+    @include desktop {
+        display: none;
+    }};
+  
+@include desktop {
+}};
+
